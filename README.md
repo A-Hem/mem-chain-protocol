@@ -1,9 +1,44 @@
-# hyperswarm fork implementation and technical roadmap; 
+### Hyperswarm fork implementation and technical roadmap; 
 
-change topic identifiers to unique topic hash
-(ensures only DMCP nodes connect) 
-prevent unauthorized nodes with peer validation 
-nodes exchange public keys or some kind of handshake to enhance security, this must be water tight. 
+## Modified Peer Discovery Topic's - Identifiers Using unique topic hash to ensure only DMCP Nodes can connect) 
+
+
+const DMCP_TOPIC = crypto
+  .createHash('sha256')
+  .update('DMCP-v0')
+  .digest()
+
+function join() {
+  this.dht.join(DMCP_TOPIC, {
+    lookup: true,
+    announce: true
+  })
+}
+
+
+
+
+
+
+
+
+
+
+## Prevent unauthorized nodes with peer validation 
+
+Nodes exchange public keys or some kind of handshake to enhance security, this must use identity verification - or some form of identity persistence, to prevent Sybil attacks. 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
