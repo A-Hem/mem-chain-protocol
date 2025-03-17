@@ -1,4 +1,11 @@
-# hyperswarm
+# hyperswarm fork implementation and technical roadmap; 
+
+change topic identifiers to unique topic hash
+(ensures only DMCP nodes connect) 
+prevent unauthorized nodes with peer validation 
+nodes exchange public keys or some kind of handshake to enhance security, this must be water tight. 
+
+
 
 ### [See the full API docs at docs.holepunch.to](https://docs.holepunch.to/building-blocks/hyperswarm)
 
