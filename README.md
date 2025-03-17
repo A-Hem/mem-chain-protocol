@@ -5,7 +5,7 @@
 
 ## example topic id
 
-'''js
+```js
 const DMCP_TOPIC = crypto
   .createHash('sha256')
   .update('DMCP-v0')
