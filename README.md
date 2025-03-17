@@ -3,8 +3,8 @@
 ## Modified Peer Discovery Topic's - Identifiers Using unique topic hash to ensure only DMCP Nodes can connect) 
 
 
-code snippet:
-
+Javascript:
+'''
 const DMCP_TOPIC = crypto
   .createHash('sha256')
   .update('DMCP-v0')
@@ -16,8 +16,7 @@ function join() {
     announce: true
   })
 }
-
-
+'''
 
 
 
@@ -34,10 +33,24 @@ Nodes exchange public keys or some kind of handshake to enhance security, this m
 
 
 
+JavaScript:
+'''
+function _onconnection(socket) {
+  // Exchange PoC credentials
+  const handshake = {
+    version: 0x01,
+    compressionAlgos: ['zstd', 'brotli'],
+    publicKey: this.keyPair.publicKey
+  }
+  
+  socket.write(Handshake.encode(handshake))
+  
+  socket.once('data', data => {
+    if (!validatePeer(data)) socket.destroy()
+  })
+}
 
-
-
-
+'''
 
 
 
