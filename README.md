@@ -1,6 +1,6 @@
 ### Hyperswarm fork implementation and technical roadmap; 
 
-## Modified Peer Discovery Topic's - Identifiers Using unique topic hash to ensure only DMCP Nodes can connect) 
+## Modified Peer Discovery Topic's - Identifiers Using unique topic hash to ensure only DMCP Nodes can connect...
 
 
 ## example topic id
