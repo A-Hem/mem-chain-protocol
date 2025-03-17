@@ -17,6 +17,8 @@ function join() {
     announce: true
   })
 }
+```
+
 
 ### Prevent unauthorized nodes with peer validation 
 
@@ -41,6 +43,12 @@ function _onconnection(socket) {
     if (!validatePeer(data)) socket.destroy()
   })
 }
+```
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ## original hyperswarm readme;
