@@ -3,6 +3,8 @@
 ## Modified Peer Discovery Topic's - Identifiers Using unique topic hash to ensure only DMCP Nodes can connect) 
 
 
+code snippet:
+
 const DMCP_TOPIC = crypto
   .createHash('sha256')
   .update('DMCP-v0')
