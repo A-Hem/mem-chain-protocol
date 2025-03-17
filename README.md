@@ -3,7 +3,7 @@
 ## Modified Peer Discovery Topic's - Identifiers Using unique topic hash to ensure only DMCP Nodes can connect) 
 
 
-##example topic id
+## example topic id
 
 '''js
 const DMCP_TOPIC = crypto
@@ -17,26 +17,16 @@ function join() {
     announce: true
   })
 }
-'''
 
-
-
-
-
-
-
-
-## Prevent unauthorized nodes with peer validation 
+### Prevent unauthorized nodes with peer validation 
 
 Nodes exchange public keys or some kind of handshake to enhance security, this must use identity verification - or some form of identity persistence, to prevent Sybil attacks. 
 
 
 
+## Example Peer Validation 
 
-
-##example peer validation
-
-'''js
+```js
 function _onconnection(socket) {
   // Exchange PoC credentials
   const handshake = {
@@ -52,12 +42,8 @@ function _onconnection(socket) {
   })
 }
 
-'''
 
-
-
-
-
+## original hyperswarm readme;
 
 ### [See the full API docs at docs.holepunch.to](https://docs.holepunch.to/building-blocks/hyperswarm)
 
